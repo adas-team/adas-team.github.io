@@ -20,42 +20,39 @@
 
 <body>
 
-    <div id="wrapper" class="toggled">
+    <div id="wrapper">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
+                    <a id="home" href="#">
                         Ada's Team
                     </a>
                 </li>
                 <li>
-                    <a href="#">Home</a>
+                    <a id="tutoring" href="#tutoring">Tutoring</a>
                 </li>
                 <li>
-                    <a href="#">Tutoring</a>
+                    <a id="executives" href="#executives">Executives</a>
                 </li>
                 <li>
-                    <a href="#">Executives</a>
+                    <a id="resources" href="#resources">Resources</a>
                 </li>
                 <li>
-                    <a href="#">Resources</a>
+                    <a id="scholarships" href="#scholarships">Scholarships</a>
                 </li>
                 <li>
-                    <a href="#">Scholarships</a>
+                    <a id="contact-us" href="#contact-us">Contact Us</a>
                 </li>
                 <li>
-                    <a href="#">Contact Us</a>
+                    <a id="sign-up" href="#sign-up">Sign Up</a>
                 </li>
                 <li>
-                    <a href="#">Sign Up</a>
+                    <a id="find-us-on" href="#find-us-on">Find us on...</a>
                 </li>
                 <li>
-                    <a href="#">Find us on...</a>
-                </li>
-                <li>
-                    <a href="#">Blog</a>
+                    <a id="blog" href="#">Blog</a>
                 </li>
             </ul>
         </div>
@@ -85,6 +82,14 @@
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+    });
+
+    $('#home').click(function() {
+        $('#page-content-wrapper').load('home.html');
+    });
+
+    $('#tutoring').click(function() {
+        $('#page-content-wrapper').html('tutoring');
     });
     </script>
 
