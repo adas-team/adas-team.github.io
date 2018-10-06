@@ -20,7 +20,7 @@
 
 <body>
 
-    <div id="wrapper">
+    <div id="wrapper" class="toggled">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -65,7 +65,6 @@
                 <img src="img/head.png" class="ada-head"></img>
                 </br>
                 <p class="ada-paragraph">This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas. Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -77,13 +76,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Menu Toggle Script -->
     <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-
     $('#home').click(function() {
         $('#page-content-wrapper').load('home.html');
     });
