@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Student Club Website">
     <meta name="author" content="Ada's Team">
+    <!--favicon-->
+	<link rel="icon" href="/img/head-square.png">
 
     <title>Ada's Team</title>
 
@@ -60,12 +62,7 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <h1 class="ada-title">Simple Sidebar</h1>
-                <img src="img/head.png" class="ada-head"></img>
-                </br>
-                <p class="ada-paragraph">This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas. Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-            </div>
+            <!-- literally everything goes in here, all inserted through jquery-->
         </div>
         <!-- /#page-content-wrapper -->
 
@@ -77,12 +74,42 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script>
+    $('#page-content-wrapper').load('pages/home.html');
+
     $('#home').click(function() {
-        $('#page-content-wrapper').load('home.html');
+        $('#page-content-wrapper').load('pages/home.html');
     });
 
     $('#tutoring').click(function() {
-        $('#page-content-wrapper').html('tutoring');
+        $('#page-content-wrapper').load('pages/tutoring.html');
+    });
+
+    $('#executives').click(function() {
+        $('#page-content-wrapper').load('pages/executives.html');
+    });
+
+    $('#resources').click(function() {
+        $('#page-content-wrapper').load('pages/resources.html');
+    });
+
+    $('#scholarships').click(function() {
+        $('#page-content-wrapper').load('pages/scholarships.html');
+    });
+
+    $('#contact-us').click(function() {
+        $('#page-content-wrapper').load('pages/contact-us.html');
+    });
+
+    $('#sign-up').click(function() {
+        $('#page-content-wrapper').load('pages/sign-up.html');
+    });
+
+    $('#find-us-on').click(function() {
+        $('#page-content-wrapper').load('pages/find-us-on.html');
+    });
+
+    $('#blog').click(function() {
+        $('#page-content-wrapper').load('pages/blog.html');
     });
     </script>
 
