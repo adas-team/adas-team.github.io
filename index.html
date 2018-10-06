@@ -74,7 +74,38 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script>
-    $('#page-content-wrapper').load('pages/home.html');
+    var hash = window.location.hash;
+
+    // this if else allows the URL's to specify what tab you want to see
+    if(hash == "#tutoring") {
+        $('#page-content-wrapper').load('pages/tutoring.html');
+    }
+    else if(hash == "#executives") {
+    	$('#page-content-wrapper').load('pages/executives.html');
+    }
+    else if(hash == "#resources") {
+    	$('#page-content-wrapper').load('pages/resources.html');
+    }
+    else if(hash == "#scholarships") {
+        $('#page-content-wrapper').load('pages/scholarships.html');
+    }
+    else if(hash == "#contact-us") {
+    	$('#page-content-wrapper').load('pages/contact-us.html');
+    }
+    else if(hash == "#sign-up") {
+    	$('#page-content-wrapper').load('pages/sign-up.html');
+    }
+    else if(hash == "#find-us-on") {
+    	$('#page-content-wrapper').load('pages/find-us-on.html');
+    }
+    else if(hash == "#blog") {
+        $('#page-content-wrapper').load('pages/blog.html');
+    }
+    else {
+    	$('#page-content-wrapper').load('pages/home.html');
+    }
+
+
 
     $('#home').click(function() {
         $('#page-content-wrapper').load('pages/home.html');
