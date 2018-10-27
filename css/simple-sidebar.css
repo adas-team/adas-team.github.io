@@ -128,7 +128,14 @@ body {
 .ada-title {
     color: #496E80;
     font-family: "Calibri";
+}
 
+.ada-title-sign-up {
+    color: #496E80;
+    font-family: "Calibri";
+    width: 640;
+    margin-left: 50px;
+    margin-bottom: 10px;
 }
 
 .ada-head {
@@ -146,4 +153,14 @@ body {
     color: #496E80;
     float: left;
     margin-right: 5px;
+}
+
+.ada-list-item {
+    font-family: "Calibri";
+    color: #496E80;
+}
+
+.resources {
+    margin-bottom: 0;
+    margin-top: 15px;
 }
