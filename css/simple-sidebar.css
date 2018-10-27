@@ -182,3 +182,8 @@ body {
     float: left;
     margin-right: 5px;
 }
+
+.banner {
+    width: inherit;
+    margin-bottom: 15px;
+}
