@@ -1,5 +1,5 @@
 ## Status
-test
+
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-simple-sidebar/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/startbootstrap-simple-sidebar.svg)](https://www.npmjs.com/package/startbootstrap-simple-sidebar)
 [![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-simple-sidebar.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-simple-sidebar)
@@ -17,6 +17,9 @@ After downloading, simply edit the HTML and CSS files included with the template
 After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
 
 You must have npm and Gulp installed globally on your machine in order to use these features.
+
+## Colors:
+Ada Blue - #39B7FC
 
 ## Troubleshooting and Help
 
