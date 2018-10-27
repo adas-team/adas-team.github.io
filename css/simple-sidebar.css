@@ -154,3 +154,13 @@ body {
     float: left;
     margin-right: 5px;
 }
+
+.ada-list-item {
+    font-family: "Calibri";
+    color: #496E80;
+}
+
+.resources {
+    margin-bottom: 0;
+    margin-top: 15px;
+}

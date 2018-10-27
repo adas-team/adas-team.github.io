@@ -19,7 +19,8 @@ After installation, run `npm install` and then run `gulp dev` which will open up
 You must have npm and Gulp installed globally on your machine in order to use these features.
 
 ## Colors:
-Ada Blue - #39B7FC
+Ada Bot Outline Blue - #39B7FC
+Ada Bot inner Blue - #496E80
 
 ## Troubleshooting and Help
 
