@@ -88,6 +88,7 @@ body {
 .sidebar-nav>.sidebar-brand {
   height: 65px;
   font-size: 24px;
+  font-family: "Calibri";
   line-height: 60px;
 }
 
@@ -98,6 +99,7 @@ body {
 
 .sidebar-nav>.sidebar-brand a:hover {
   color: #fff;
+  font-family: "Calibri";
   background: none;
 }
 
@@ -148,12 +150,12 @@ body {
 
 .ada-blue {
     font-weight: bold;
-    color: #668CD9;
+    color: #003366;
 }
 
-.ada-purple {
+.ada-pink {
     font-weight: bold;
-    color: #9643A5;
+    color: #ff69b4;
 }
 
 .left {
@@ -194,4 +196,18 @@ body {
 .ada-blog-menu {
     margin-top: 15px;
     margin-bottom: 30px;
+}
+
+.ada-big-calendar {
+    display: none;
+}
+
+@media(min-width:840px) {
+    .ada-small-calendar {
+        display: none;
+    }
+
+    .ada-big-calendar {
+        display: inline;
+    }
 }
