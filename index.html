@@ -22,15 +22,18 @@
 
 <body class="ada-background">
 
-    <div id="wrapper" class="toggled">
+    <header id="header" class="ada-header">
+        <input class="left ada-header-menu" href="#menu-toggle" id="menu-toggle" type="image" src="img/menu.png" />
+        <div class="ada-header-text">Ada's Team</div>
+    </header>
+
+    <div id="wrapper">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a id="home" href="#">
-                        Ada's Team
-                    </a>
+                <li class="space-above">
+                    <a id="home" href="#">Home</a>
                 </li>
                 <li>
                     <a id="tutoring" href="#tutoring">Tutoring</a>
@@ -48,7 +51,7 @@
                     <a id="sign-up" href="#sign-up">Sign Up</a>
                 </li>
                 <li>
-                    <a id="contact-us" href="#contact-us">Contact Us</a>
+                    <a id="find-us" href="#find-us">Find Us</a>
                 </li>
                 <li>
                     <a id="blog" href="#blog">Blog</a>
@@ -66,11 +69,22 @@
     </div>
     <!-- /#wrapper -->
 
+    <footer id="footer" class="ada-footer"></footer>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script>
+
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    $('#footer').load('pages/footer.html');
+
+
     var hash = window.location.hash;
 
     // this if else allows the URL's to specify what tab you want to see
@@ -90,8 +104,8 @@
         $('#page-content-wrapper').load('pages/scholarships.html');
         $(window).scrollTop(0);
     }
-    else if(hash == "#contact-us") {
-    	$('#page-content-wrapper').load('pages/contact-us.html');
+    else if(hash == "#find-us") {
+    	$('#page-content-wrapper').load('pages/find-us.html');
         $(window).scrollTop(0);
     }
     else if(hash == "#sign-up") {
@@ -138,8 +152,8 @@
         $(window).scrollTop(0);
     });
 
-    $('#contact-us').click(function() {
-        $('#page-content-wrapper').load('pages/contact-us.html');
+    $('#find-us').click(function() {
+        $('#page-content-wrapper').load('pages/find-us.html');
         $(window).scrollTop(0);
     });
 
