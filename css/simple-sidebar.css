@@ -157,6 +157,10 @@ body {
     margin-bottom: 15px;
 }
 
+.extra-space {
+    margin-bottom: 30px;
+}
+
 .space-above {
     margin-top: 15px;
 }
@@ -176,6 +180,10 @@ body {
     margin-right: 5px;
 }
 
+.right {
+    float: right;
+}
+
 .banner {
     width: inherit;
     margin-bottom: 15px;
@@ -186,14 +194,14 @@ body {
 }
 
 .ada-link {
-    width: 100px;
-    height: 100px;
-    margin-left: 10px;
-    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    margin-top: 3px;
 }
 
 .ada-link-wrapper {
-    width: 120px;
+    width: 30px;
 }
 
 .center {
@@ -231,4 +239,54 @@ body {
 
 .width-100 {
     width: 100%;
+}
+
+.ada-header {
+    height: 30px;
+    background-color: #78CEFC;
+    width: 100%;
+    z-index: 10;
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+
+.ada-header-text {
+    font-family: "Calibri";
+    color: #496E80;
+    margin-left: 50px;
+    padding-top: 3px;
+}
+
+
+.ada-footer {
+    height: 30px;
+    background-color: #78CEFC;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.ada-header-menu {
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 20px;
+}
+
+.ada-header-menu:focus {
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 20px;
+    outline: none;
+}
+
+.black {
+    color: black;
+}
+
+.ada-footer-email {
+    margin-top: 2px;
+    margin-right: 10px;
 }
