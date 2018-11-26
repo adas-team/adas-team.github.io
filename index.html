@@ -136,56 +136,65 @@
     $('#home').click(function() {
         $('#page-content-wrapper').load('pages/home.html');
         $(window).scrollTop(0);
-        $("#wrapper").toggleClass("toggled");
+        toggleSideBarOnMobile();
     });
 
     $('#tutoring').click(function() {
         $('#page-content-wrapper').load('pages/tutoring.html');
         $(window).scrollTop(0);
-        $("#wrapper").toggleClass("toggled");
+        toggleSideBarOnMobile();        
     });
 
     $('#executives').click(function() {
         $('#page-content-wrapper').load('pages/executives.html');
         $(window).scrollTop(0);
-        $("#wrapper").toggleClass("toggled");
+        toggleSideBarOnMobile();
     });
 
     $('#resources').click(function() {
         $('#page-content-wrapper').load('pages/resources.html');
         $(window).scrollTop(0);
-        $("#wrapper").toggleClass("toggled");
+        toggleSideBarOnMobile();
     });
 
     $('#scholarships').click(function() {
         $('#page-content-wrapper').load('pages/scholarships.html');
         $(window).scrollTop(0);
-        $("#wrapper").toggleClass("toggled");
+        toggleSideBarOnMobile();
     });
 
     $('#contact-us').click(function() {
         $('#page-content-wrapper').load('pages/contact-us.html');
         $(window).scrollTop(0);
-        $("#wrapper").toggleClass("toggled");
+        toggleSideBarOnMobile();        
     });
 
     $('#sign-up').click(function() {
         $('#page-content-wrapper').load('pages/sign-up.html');
         $(window).scrollTop(0);
-        $("#wrapper").toggleClass("toggled");
+        toggleSideBarOnMobile();
+        
     });
 
     $('#contact-us-on').click(function() {
         $('#page-content-wrapper').load('pages/contact-us-on.html');
         $(window).scrollTop(0);
-        $("#wrapper").toggleClass("toggled");
+        toggleSideBarOnMobile();
+        
     });
 
     $('#blog').click(function() {
         $('#page-content-wrapper').load('pages/blog.html');
         $(window).scrollTop(0);
-        $("#wrapper").toggleClass("toggled");
+        toggleSideBarOnMobile();
+        
     });
+
+    toggleSideBarOnMobile = () => {
+        if ($(window).width() < 700){
+            $("#wrapper").toggleClass("toggled");
+        }
+    }
     </script>
 
 </body>
