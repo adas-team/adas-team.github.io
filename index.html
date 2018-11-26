@@ -51,7 +51,7 @@
                     <a id="sign-up" href="#sign-up">Sign Up</a>
                 </li>
                 <li>
-                    <a id="find-us" href="#find-us">Find Us</a>
+                    <a id="contact-us" href="#contact-us">Contact Us</a>
                 </li>
                 <li>
                     <a id="blog" href="#blog">Blog</a>
@@ -76,6 +76,12 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script>
+
+    $(document).ready(function(){
+        if ($(window).width() > 700){
+            $("#wrapper").toggleClass("toggled");
+        }
+    });
 
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
@@ -104,16 +110,16 @@
         $('#page-content-wrapper').load('pages/scholarships.html');
         $(window).scrollTop(0);
     }
-    else if(hash == "#find-us") {
-    	$('#page-content-wrapper').load('pages/find-us.html');
+    else if(hash == "#contact-us") {
+    	$('#page-content-wrapper').load('pages/contact-us.html');
         $(window).scrollTop(0);
     }
     else if(hash == "#sign-up") {
     	$('#page-content-wrapper').load('pages/sign-up.html');
         $(window).scrollTop(0);
     }
-    else if(hash == "#find-us-on") {
-    	$('#page-content-wrapper').load('pages/find-us-on.html');
+    else if(hash == "#contact-us-on") {
+    	$('#page-content-wrapper').load('pages/contact-us-on.html');
         $(window).scrollTop(0);
     }
     else if(hash == "#blog") {
@@ -157,8 +163,8 @@
         $("#wrapper").toggleClass("toggled");
     });
 
-    $('#find-us').click(function() {
-        $('#page-content-wrapper').load('pages/find-us.html');
+    $('#contact-us').click(function() {
+        $('#page-content-wrapper').load('pages/contact-us.html');
         $(window).scrollTop(0);
         $("#wrapper").toggleClass("toggled");
     });
@@ -169,8 +175,8 @@
         $("#wrapper").toggleClass("toggled");
     });
 
-    $('#find-us-on').click(function() {
-        $('#page-content-wrapper').load('pages/find-us-on.html');
+    $('#contact-us-on').click(function() {
+        $('#page-content-wrapper').load('pages/contact-us-on.html');
         $(window).scrollTop(0);
         $("#wrapper").toggleClass("toggled");
     });
