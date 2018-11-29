@@ -4,6 +4,14 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
  */
 
+ :root {
+     --ada-bot-pink: #F0C7D7;
+     --ada-bright-blue: #39B7FC;
+     --ada-dark-blue: #496E80; /* this should probably be black*/
+     --ada-medium-blue: #78CEFC;
+     --ada-mint-blue: #ccf4f9;
+ }
+
 body {
   overflow-x: hidden;
 }
@@ -28,7 +36,7 @@ body {
   height: 100%;
   margin-left: -150px;
   overflow-y: auto;
-  background: #39B7FC;
+  background: var(--ada-bright-blue);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -109,12 +117,12 @@ body {
 /* --------- ada styles --------- */
 
 .ada-title {
-    color: #496E80;
+    color: black;
     font-family: "Calibri";
 }
 
 .ada-title-sign-up {
-    color: #496E80;
+    color: black;
     font-family: "Calibri";
     width: 640;
     text-align: center;
@@ -127,7 +135,7 @@ body {
 
 .ada-paragraph {
     font-family: "Calibri";
-    color: #496E80;
+    color: black;
     margin-bottom: 0;
 }
 
@@ -139,7 +147,7 @@ body {
 
 .ada-list-item {
     font-family: "Calibri";
-    color: #496E80;
+    color: black;
 }
 
 .resources {
@@ -190,7 +198,7 @@ body {
 }
 
 .ada-background {
-    background-color: #ccf4f9
+    background-color: var(--ada-mint-blue);
 }
 
 .ada-link {
@@ -247,7 +255,7 @@ body {
 }
 
 .ada-row {
-    border-bottom: 1px solid #496E80;
+    border-bottom: 1px solid var(--ada-dark-blue);
 }
 
 .width-100 {
@@ -256,7 +264,7 @@ body {
 
 .ada-header {
     height: 30px;
-    background-color: #78CEFC;
+    background-color: var(--ada-medium-blue);
     width: 100%;
     z-index: 10;
     position: -webkit-sticky;
@@ -267,7 +275,7 @@ body {
 
 .ada-header-text {
     font-family: "Calibri";
-    color: #496E80;
+    color: black;
     margin-left: 50px;
     padding-top: 3px;
 }
@@ -275,7 +283,7 @@ body {
 
 .ada-footer {
     height: 30px;
-    background-color: #78CEFC;
+    background-color: var(--ada-medium-blue);
     position: fixed;
     left: 0;
     bottom: 0;
