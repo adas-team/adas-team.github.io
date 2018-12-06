@@ -74,43 +74,36 @@ body {
 .sidebar-nav li {
   text-indent: 20px;
   line-height: 40px;
-  font-family: "Calibri", sans-serif;
 }
 
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
-  font-family: "Calibri", sans-serif;
   color: #000;
 }
 
 .sidebar-nav li a:hover {
   text-decoration: none;
   color: #fff;
-  font-family: "Calibri", sans-serif;
   background: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-nav li a:active, .sidebar-nav li a:focus {
   text-decoration: none;
-  font-family: "Calibri";
 }
 
 .sidebar-nav>.sidebar-brand {
   height: 65px;
   font-size: 24px;
-  font-family: "Calibri", sans-serif;
   line-height: 60px;
 }
 
 .sidebar-nav>.sidebar-brand a {
   color: #000;
-  font-family: "Calibri", sans-serif;
 }
 
 .sidebar-nav>.sidebar-brand a:hover {
   color: #fff;
-  font-family: "Calibri", sans-serif;
   background: none;
 }
 
@@ -118,13 +111,11 @@ body {
 
 .ada-title {
     color: black;
-    font-family: "Calibri", sans-serif;
     font-weight: bold;
 }
 
 .ada-title-sign-up {
     color: black;
-    font-family: "Calibri", sans-serif;
     width: 640;
     text-align: center;
     margin-bottom: 10px;
@@ -136,7 +127,6 @@ body {
 }
 
 .ada-paragraph {
-    font-family: "Calibri", sans-serif;
     color: black;
     margin-bottom: 0;
 }
@@ -148,7 +138,6 @@ body {
 }
 
 .ada-list-item {
-    font-family: "Calibri", sans-serif;
     color: black;
 }
 
@@ -276,7 +265,6 @@ body {
 }
 
 .ada-header-text {
-    font-family: "Calibri", sans-serif;
     color: black;
     margin-left: 50px;
     padding-top: 3px;
