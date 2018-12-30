@@ -235,7 +235,7 @@ body {
 }
 
 
-@media(min-width:840px) {
+@media(min-width:990px) {
     .ada-small-calendar {
         display: none;
     }

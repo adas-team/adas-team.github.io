@@ -39,6 +39,9 @@
                     <a id="tutoring" href="#tutoring">Tutoring</a>
                 </li>
                 <li>
+                    <a id="events" href="#events">Events</a>
+                </li>
+                <li>
                     <a id="executives" href="#executives">Executives</a>
                 </li>
                 <li>
@@ -98,8 +101,12 @@
         $('#page-content-wrapper').load('pages/tutoring.html');
         $(window).scrollTop(0);
     }
+    else if(hash == "#events") {
+    	$('#page-content-wrapper').load('pages/events.html');
+        $(window).scrollTop(0);
+    }
     else if(hash == "#executives") {
-    	$('#page-content-wrapper').load('pages/executives.html');
+        $('#page-content-wrapper').load('pages/executives.html');
         $(window).scrollTop(0);
     }
     else if(hash == "#resources") {
@@ -142,7 +149,13 @@
     $('#tutoring').click(function() {
         $('#page-content-wrapper').load('pages/tutoring.html');
         $(window).scrollTop(0);
-        toggleSideBarOnMobile();        
+        toggleSideBarOnMobile();
+    });
+
+    $('#events').click(function() {
+        $('#page-content-wrapper').load('pages/events.html');
+        $(window).scrollTop(0);
+        toggleSideBarOnMobile();
     });
 
     $('#executives').click(function() {
@@ -166,28 +179,28 @@
     $('#contact-us').click(function() {
         $('#page-content-wrapper').load('pages/contact-us.html');
         $(window).scrollTop(0);
-        toggleSideBarOnMobile();        
+        toggleSideBarOnMobile();
     });
 
     $('#sign-up').click(function() {
         $('#page-content-wrapper').load('pages/sign-up.html');
         $(window).scrollTop(0);
         toggleSideBarOnMobile();
-        
+
     });
 
     $('#contact-us-on').click(function() {
         $('#page-content-wrapper').load('pages/contact-us-on.html');
         $(window).scrollTop(0);
         toggleSideBarOnMobile();
-        
+
     });
 
     $('#blog').click(function() {
         $('#page-content-wrapper').load('pages/blog.html');
         $(window).scrollTop(0);
         toggleSideBarOnMobile();
-        
+
     });
 
     toggleSideBarOnMobile = () => {
