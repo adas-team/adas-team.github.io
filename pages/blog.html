@@ -1,4 +1,14 @@
+---
+---
+
 <div class="container-fluid">
     <h1 class="ada-title">Blog</h1>
-    <iFrame src ="https://adasteam.wordpress.com/" width="100%" height="800px" scrolling="yes" align="left"></iFrame>
+    <ul>
+    {% for post in site.posts %}
+    <li>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <time datetime="{{ post.date | date: "%Y-%m-%d"}}"">{{ post.date | date: "%b %-d, %Y" }}</time>
+    </li>
+    {% endfor %}
+    </ul>
 </div>
