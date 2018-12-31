@@ -6,6 +6,19 @@
 [![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-simple-sidebar/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-simple-sidebar)
 [![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-simple-sidebar/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-simple-sidebar?type=dev)
 
+## Make a new blog post
+
+> **TODO** this section
+
+    gem install github-pages
+
+<http://localhost:4000/>
+
+    jekyll serve --watch
+
+    _posts/yyyy-mm-dd-title-slug.md
+
+
 ## Making changes to website
 
 * Fork and clone the repo
@@ -20,6 +33,7 @@ You must have npm and Gulp installed globally on your machine in order to use th
 ## Colors:
 Ada Bot Outline Blue - #39B7FC <br/>
 Ada Bot inner Blue - #496E80
+
 
 ## Troubleshooting and Help
 
