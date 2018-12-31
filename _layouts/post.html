@@ -4,7 +4,8 @@
 <html lang="{{ site.lang }}">
 <head>
     <meta charset="UTF-8">
-    {% seo %}
+    {% seo %}{%comment%} SEO Plugin: Creates the <title> tag and lots of <meta> tags! {%endcomment%}
+    {% feed_meta %}{%comment%} Links to the RSS feed. {%endcomment%}
 </head>
 <body>
     {{ page }}
