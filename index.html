@@ -110,12 +110,10 @@
 
     // Whenever the URI's #fragment (a.k.a., hash) changes, navigate to a new page.
     // NB: the sidebar links will change the hash appropriately.
-    if ('onhashchange' in window) {
-        window.onhashchange = function (_event) {
-            navigateToPageBasedOnHash();
-            // You clicked a link in the sidebar, so the sidebar should close.
-            toggleSideBarOnMobile();
-        }
+    window.onhashchange = function (_event) {
+        navigateToPageBasedOnHash();
+        // You clicked a link in the sidebar, so the sidebar should close.
+        toggleSideBarOnMobile();
     }
 
     function toggleSideBarOnMobile() {
