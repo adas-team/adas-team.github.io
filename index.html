@@ -93,6 +93,8 @@
 
     $('#footer').load('pages/footer.html');
 
+    // Links that go to a subpage.
+    var pageLinks = $('.sidebar-nav a[id]');
 
     var hash = window.location.hash;
     console.assert(hash.length === 0 || hash[0] === '#');
@@ -100,7 +102,7 @@
 
     // Get a array of all of the valid pages.
     // Valid pages are marked by an #id in the sidebar-nav.
-    var pages = $('.sidebar-nav a[id]').map(function (_index, element) {
+    var pages = pageLinks.map(function (_index, element) {
         return element.id;
     }).toArray();
 
