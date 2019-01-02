@@ -80,6 +80,8 @@
 
     <script>
 
+    // Open the sidebar on wide enough screens.
+    // TODO: use a media query for this?
     $(document).ready(function(){
         if ($(window).width() > 700){
             $("#wrapper").toggleClass("toggled");
@@ -93,9 +95,8 @@
 
     $('#footer').load('pages/footer.html');
 
-    // Links that go to a subpage.
+    // Collect all of the links that go to pages/*.html.
     var pageLinks = $('.sidebar-nav a[id]');
-
 
     // Get a array of all of the valid pages.
     // Valid pages are marked by an #id in the sidebar-nav.
@@ -106,7 +107,7 @@
     navigateToPageBasedOnHash(window.location.hash);
 
     // Whenever the URI's #fragment (a.k.a., hash) changes, navigate to a new page.
-    // NB: the sidebar links will chance the hash appropriately.
+    // NB: the sidebar links will change the hash appropriately.
     if ('onhashchange' in window) {
         window.onhashchange = (_event) => {
             navigateToPageBasedOnHash(window.location.hash);
