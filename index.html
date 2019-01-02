@@ -95,42 +95,26 @@
 
 
     var hash = window.location.hash;
+    console.assert(hash.length === 0 || hash[0] === '#');
+    var requestedPage = hash.slice('1');
+
+    // Get a array of all of the valid pages.
+    // Valid pages are marked by an #id in the sidebar-nav.
+    var pages = $('.sidebar-nav a[id]').map(function (_index, element) {
+        return element.id;
+    }).toArray();
 
     function goToPage(name) {
         $('#page-content-wrapper').load('pages/' + name + '.html');
         $(window).scrollTop(0);
     }
 
+
     // this if else allows the URL's to specify what tab you want to see
-    if(hash == "#tutoring") {
-        goToPage('tutoring');
-    }
-    else if(hash == "#events") {
-    	goToPage('events');
-    }
-    else if(hash == "#executives") {
-        goToPage('executives');
-    }
-    else if(hash == "#resources") {
-    	goToPage('resources');
-    }
-    else if(hash == "#scholarships") {
-        goToPage('scholarships');
-    }
-    else if(hash == "#contact-us") {
-    	goToPage('contact-us');
-    }
-    else if(hash == "#sign-up") {
-    	goToPage('sign-up');
-    }
-    else if(hash == "#contact-us-on") {
-    	goToPage('contact-us-on');
-    }
-    else if(hash == "#blog") {
-        goToPage('blog');
-    }
-    else {
-    	goToPage('home');
+    if (pages.includes(requestedPage)) {
+        goToPage(requestedPage);
+    } else {
+        goToPage('home');
     }
 
 
