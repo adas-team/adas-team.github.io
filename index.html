@@ -119,57 +119,13 @@
         goToPage('home');
     }
 
-
-    $('#home').click(function() {
-        goToPage('home');
+    // Whenever you click a link in the sidebar, it should navigate to
+    // the page as specified in the #id
+    pageLinks.click(function() {
+        goToPage(this.id);
         toggleSideBarOnMobile();
     });
 
-    $('#tutoring').click(function() {
-        goToPage('tutoring');
-        toggleSideBarOnMobile();
-    });
-
-    $('#events').click(function() {
-        goToPage('events');
-        toggleSideBarOnMobile();
-    });
-
-    $('#executives').click(function() {
-        goToPage('executives');
-        toggleSideBarOnMobile();
-    });
-
-    $('#resources').click(function() {
-        goToPage('resources');
-        toggleSideBarOnMobile();
-    });
-
-    $('#scholarships').click(function() {
-        goToPage('scholarships');
-        toggleSideBarOnMobile();
-    });
-
-    $('#contact-us').click(function() {
-        goToPage('contact-us');
-        toggleSideBarOnMobile();
-    });
-
-    $('#sign-up').click(function() {
-        goToPage('sign-up');
-        toggleSideBarOnMobile();
-    });
-
-    $('#contact-us-on').click(function() {
-        goToPage('contact-us-on');
-        toggleSideBarOnMobile();
-    });
-
-    $('#blog').click(function() {
-        goToPage('blog');
-        toggleSideBarOnMobile();
-
-    });
 
     toggleSideBarOnMobile = () => {
         if ($(window).width() < 700){
