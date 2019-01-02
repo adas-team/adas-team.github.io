@@ -80,6 +80,8 @@
 
     <script>
 
+    installPolyfills();
+
     // Open the sidebar on wide enough screens.
     // TODO: use a media query for this?
     $(document).ready(function(){
@@ -109,22 +111,21 @@
     // Whenever the URI's #fragment (a.k.a., hash) changes, navigate to a new page.
     // NB: the sidebar links will change the hash appropriately.
     if ('onhashchange' in window) {
-        window.onhashchange = (_event) => {
+        window.onhashchange = function (_event) {
             navigateToPageBasedOnHash();
             // You clicked a link in the sidebar, so the sidebar should close.
             toggleSideBarOnMobile();
         }
     }
 
-    toggleSideBarOnMobile = () => {
+    function toggleSideBarOnMobile() {
         if ($(window).width() < 700){
             $("#wrapper").toggleClass("toggled");
         }
     }
 
     function navigateToPageBasedOnHash() {
-        let hash = window.location.hash;
-        console.assert(hash.length === 0 || hash[0] === '#');
+        var hash = window.location.hash;
         var requestedPage = hash.slice('1');
 
         // this if else allows the URL's to specify what tab you want to see
@@ -136,10 +137,57 @@
     }
 
     // Navigates to the given page name.
-    // The name must coorespond to a file in pages/*.html. 
+    // The name must coorespond to a file in pages/*.html.
     function goToPage(name) {
         $('#page-content-wrapper').load('pages/' + name + '.html');
         $(window).scrollTop(0);
+    }
+
+    // IE11 doesn't have Array#includes(), so add it here.
+    function installPolyfills() {
+        if ('includes' in Array.prototype) {
+            return;
+        }
+
+        Object.defineProperty(Array.prototype, 'includes', {
+            // Make sure the property is NON-ENUMERABLE, or else it will
+            // appear in for (var x in array) loops (because JavaScript)
+            enumerable: false,
+            value: includesPolyfill,
+        });
+
+        // Implemented (roughly) according to the standard:
+        // https://www.ecma-international.org/ecma-262/7.0/#sec-array.prototype.includes
+        function includesPolyfill(searchElement, fromIndex) {
+            // The ECMAScript standard chose bad variable names;
+            // I'm just being consistent :/
+            var k;
+            var len;
+            var n;
+
+            len = this.length;
+            if (len === 0) {
+                return false;
+            }
+
+            // ~~+ is a concise way to coerce things into integers.
+            n = ~~+fromIndex || 0;
+            if (n >= 0) {
+                k = n;
+            } else {
+                k = len + n;
+                if (k < 0) {
+                    k = 0;
+                }
+            }
+
+            for (/* 👆👀 */; k < len; k++) {
+                if (this[k] === searchElement) {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
     </script>
 
