@@ -104,13 +104,13 @@
         return element.id;
     }).toArray();
 
-    navigateToPageBasedOnHash(window.location.hash);
+    navigateToPageBasedOnHash();
 
     // Whenever the URI's #fragment (a.k.a., hash) changes, navigate to a new page.
     // NB: the sidebar links will change the hash appropriately.
     if ('onhashchange' in window) {
         window.onhashchange = (_event) => {
-            navigateToPageBasedOnHash(window.location.hash);
+            navigateToPageBasedOnHash();
             // You clicked a link in the sidebar, so the sidebar should close.
             toggleSideBarOnMobile();
         }
@@ -122,7 +122,8 @@
         }
     }
 
-    function navigateToPageBasedOnHash(hash) {
+    function navigateToPageBasedOnHash() {
+        let hash = window.location.hash;
         console.assert(hash.length === 0 || hash[0] === '#');
         var requestedPage = hash.slice('1');
 
