@@ -96,9 +96,6 @@
     // Links that go to a subpage.
     var pageLinks = $('.sidebar-nav a[id]');
 
-    var hash = window.location.hash;
-    console.assert(hash.length === 0 || hash[0] === '#');
-    var requestedPage = hash.slice('1');
 
     // Get a array of all of the valid pages.
     // Valid pages are marked by an #id in the sidebar-nav.
@@ -106,13 +103,7 @@
         return element.id;
     }).toArray();
 
-
-    // this if else allows the URL's to specify what tab you want to see
-    if (pages.includes(requestedPage)) {
-        goToPage(requestedPage);
-    } else {
-        goToPage('home');
-    }
+    navigateToPageBasedOnHash(window.location.hash);
 
     // Whenever you click a link in the sidebar, it should navigate to
     // the page as specified in the #id
@@ -125,6 +116,18 @@
     toggleSideBarOnMobile = () => {
         if ($(window).width() < 700){
             $("#wrapper").toggleClass("toggled");
+        }
+    }
+
+    function navigateToPageBasedOnHash(hash) {
+        console.assert(hash.length === 0 || hash[0] === '#');
+        var requestedPage = hash.slice('1');
+
+        // this if else allows the URL's to specify what tab you want to see
+        if (pages.includes(requestedPage)) {
+            goToPage(requestedPage);
+        } else {
+            goToPage('home');
         }
     }
 
