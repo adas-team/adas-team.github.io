@@ -105,13 +105,15 @@
 
     navigateToPageBasedOnHash(window.location.hash);
 
-    // Whenever you click a link in the sidebar, it should navigate to
-    // the page as specified in the #id
-    pageLinks.click(function() {
-        goToPage(this.id);
-        toggleSideBarOnMobile();
-    });
-
+    // Whenever the URI's #fragment (a.k.a., hash) changes, navigate to a new page.
+    // NB: the sidebar links will chance the hash appropriately.
+    if ('onhashchange' in window) {
+        window.onhashchange = (_event) => {
+            navigateToPageBasedOnHash(window.location.hash);
+            // You clicked a link in the sidebar, so the sidebar should close.
+            toggleSideBarOnMobile();
+        }
+    }
 
     toggleSideBarOnMobile = () => {
         if ($(window).width() < 700){
