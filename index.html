@@ -106,11 +106,6 @@
         return element.id;
     }).toArray();
 
-    function goToPage(name) {
-        $('#page-content-wrapper').load('pages/' + name + '.html');
-        $(window).scrollTop(0);
-    }
-
 
     // this if else allows the URL's to specify what tab you want to see
     if (pages.includes(requestedPage)) {
@@ -131,6 +126,13 @@
         if ($(window).width() < 700){
             $("#wrapper").toggleClass("toggled");
         }
+    }
+
+    // Navigates to the given page name.
+    // The name must coorespond to a file in pages/*.html. 
+    function goToPage(name) {
+        $('#page-content-wrapper').load('pages/' + name + '.html');
+        $(window).scrollTop(0);
     }
     </script>
 
