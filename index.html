@@ -96,46 +96,41 @@
 
     var hash = window.location.hash;
 
+    function goToPage(name) {
+        $('#page-content-wrapper').load('pages/' + name + '.html');
+        $(window).scrollTop(0);
+    }
+
     // this if else allows the URL's to specify what tab you want to see
     if(hash == "#tutoring") {
-        $('#page-content-wrapper').load('pages/tutoring.html');
-        $(window).scrollTop(0);
+        goToPage('tutoring');
     }
     else if(hash == "#events") {
-    	$('#page-content-wrapper').load('pages/events.html');
-        $(window).scrollTop(0);
+    	goToPage('events');
     }
     else if(hash == "#executives") {
-        $('#page-content-wrapper').load('pages/executives.html');
-        $(window).scrollTop(0);
+        goToPage('executives');
     }
     else if(hash == "#resources") {
-    	$('#page-content-wrapper').load('pages/resources.html');
-        $(window).scrollTop(0);
+    	goToPage('resources');
     }
     else if(hash == "#scholarships") {
-        $('#page-content-wrapper').load('pages/scholarships.html');
-        $(window).scrollTop(0);
+        goToPage('scholarships');
     }
     else if(hash == "#contact-us") {
-    	$('#page-content-wrapper').load('pages/contact-us.html');
-        $(window).scrollTop(0);
+    	goToPage('contact-us');
     }
     else if(hash == "#sign-up") {
-    	$('#page-content-wrapper').load('pages/sign-up.html');
-        $(window).scrollTop(0);
+    	goToPage('sign-up');
     }
     else if(hash == "#contact-us-on") {
-    	$('#page-content-wrapper').load('pages/contact-us-on.html');
-        $(window).scrollTop(0);
+    	goToPage('contact-us-on');
     }
     else if(hash == "#blog") {
-        $('#page-content-wrapper').load('pages/blog.html');
-        $(window).scrollTop(0);
+        goToPage('blog');
     }
     else {
-    	$('#page-content-wrapper').load('pages/home.html');
-        $(window).scrollTop(0);
+    	goToPage('home');
     }
 
 
