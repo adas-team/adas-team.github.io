@@ -80,6 +80,8 @@
 
     <script>
 
+    // Open the sidebar on wide enough screens.
+    // TODO: use a media query for this?
     $(document).ready(function(){
         if ($(window).width() > 700){
             $("#wrapper").toggleClass("toggled");
@@ -93,120 +95,59 @@
 
     $('#footer').load('pages/footer.html');
 
+    // Collect all of the links that go to pages/*.html.
+    var pageLinks = $('.sidebar-nav a[id]');
 
-    var hash = window.location.hash;
+    // Get a array of all of the valid pages.
+    // Valid pages are marked by an #id in the sidebar-nav.
+    var pages = pageLinks.map(function (_index, element) {
+        return element.id;
+    }).toArray();
 
-    // this if else allows the URL's to specify what tab you want to see
-    if(hash == "#tutoring") {
-        $('#page-content-wrapper').load('pages/tutoring.html');
-        $(window).scrollTop(0);
-    }
-    else if(hash == "#events") {
-    	$('#page-content-wrapper').load('pages/events.html');
-        $(window).scrollTop(0);
-    }
-    else if(hash == "#executives") {
-        $('#page-content-wrapper').load('pages/executives.html');
-        $(window).scrollTop(0);
-    }
-    else if(hash == "#resources") {
-    	$('#page-content-wrapper').load('pages/resources.html');
-        $(window).scrollTop(0);
-    }
-    else if(hash == "#scholarships") {
-        $('#page-content-wrapper').load('pages/scholarships.html');
-        $(window).scrollTop(0);
-    }
-    else if(hash == "#contact-us") {
-    	$('#page-content-wrapper').load('pages/contact-us.html');
-        $(window).scrollTop(0);
-    }
-    else if(hash == "#sign-up") {
-    	$('#page-content-wrapper').load('pages/sign-up.html');
-        $(window).scrollTop(0);
-    }
-    else if(hash == "#contact-us-on") {
-    	$('#page-content-wrapper').load('pages/contact-us-on.html');
-        $(window).scrollTop(0);
-    }
-    else if(hash == "#blog") {
-        $('#page-content-wrapper').load('pages/blog.html');
-        $(window).scrollTop(0);
-    }
-    else {
-    	$('#page-content-wrapper').load('pages/home.html');
-        $(window).scrollTop(0);
+    navigateToPageBasedOnHash();
+
+    // Whenever the URI's #fragment (a.k.a., hash) changes, navigate to a new page.
+    // NB: the sidebar links will change the hash appropriately.
+    window.onhashchange = function (_event) {
+        navigateToPageBasedOnHash();
+        // You clicked a link in the sidebar, so the sidebar should close.
+        toggleSideBarOnMobile();
     }
 
-
-
-    $('#home').click(function() {
-        $('#page-content-wrapper').load('pages/home.html');
-        $(window).scrollTop(0);
-        toggleSideBarOnMobile();
-    });
-
-    $('#tutoring').click(function() {
-        $('#page-content-wrapper').load('pages/tutoring.html');
-        $(window).scrollTop(0);
-        toggleSideBarOnMobile();
-    });
-
-    $('#events').click(function() {
-        $('#page-content-wrapper').load('pages/events.html');
-        $(window).scrollTop(0);
-        toggleSideBarOnMobile();
-    });
-
-    $('#executives').click(function() {
-        $('#page-content-wrapper').load('pages/executives.html');
-        $(window).scrollTop(0);
-        toggleSideBarOnMobile();
-    });
-
-    $('#resources').click(function() {
-        $('#page-content-wrapper').load('pages/resources.html');
-        $(window).scrollTop(0);
-        toggleSideBarOnMobile();
-    });
-
-    $('#scholarships').click(function() {
-        $('#page-content-wrapper').load('pages/scholarships.html');
-        $(window).scrollTop(0);
-        toggleSideBarOnMobile();
-    });
-
-    $('#contact-us').click(function() {
-        $('#page-content-wrapper').load('pages/contact-us.html');
-        $(window).scrollTop(0);
-        toggleSideBarOnMobile();
-    });
-
-    $('#sign-up').click(function() {
-        $('#page-content-wrapper').load('pages/sign-up.html');
-        $(window).scrollTop(0);
-        toggleSideBarOnMobile();
-
-    });
-
-    $('#contact-us-on').click(function() {
-        $('#page-content-wrapper').load('pages/contact-us-on.html');
-        $(window).scrollTop(0);
-        toggleSideBarOnMobile();
-
-    });
-
-    $('#blog').click(function() {
-        $('#page-content-wrapper').load('pages/blog.html');
-        $(window).scrollTop(0);
-        toggleSideBarOnMobile();
-
-    });
-
-    toggleSideBarOnMobile = () => {
+    function toggleSideBarOnMobile() {
         if ($(window).width() < 700){
             $("#wrapper").toggleClass("toggled");
         }
+    }
+
+    function navigateToPageBasedOnHash() {
+        var hash = window.location.hash;
+        var requestedPage = hash.slice('1');
+
+        // this if else allows the URL's to specify what tab you want to see
+        if (includes(pages, requestedPage)) {
+            goToPage(requestedPage);
+        } else {
+            goToPage('home');
+        }
+    }
+
+    // Navigates to the given page name.
+    // The name must coorespond to a file in pages/*.html.
+    function goToPage(name) {
+        $('#page-content-wrapper').load('pages/' + name + '.html');
+        $(window).scrollTop(0);
+    }
+
+    // Same as Array.prototype.includes(), but defined here for browsers that
+    // don't support it (*cough* IE11 *cough cough*)
+    function includes(array, searchItem) {
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] === searchItem) {
+                return true;
+            }
+        }
+        return false;
     }
     </script>
 
