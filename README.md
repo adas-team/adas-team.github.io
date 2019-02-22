@@ -17,7 +17,7 @@ See [Documentation here](https://github.com/adas-team/adas-team.github.io/blob/m
 * Fork and clone the repo
 * install npm and gulp via command line on your terminal
 * Run `npm install` (you may get ~3 warnings but that is okay)
-* Edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else!
+* Edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files (in `/pages`) you need to worry about, you can ignore everything else!
 * Run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved.
 
 
