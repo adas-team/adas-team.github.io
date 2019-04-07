@@ -27,6 +27,8 @@ You must have npm and Gulp installed globally on your machine in order to use th
 Ada Bot Outline Blue - #39B7FC <br/>
 Ada Bot inner Blue - #496E80
 
+## The link that we can see website analysis on, must be logged on to ada's team email (exec only)
+https://www.google.com/webmasters/tools/
 
 ## Troubleshooting and Help
 
