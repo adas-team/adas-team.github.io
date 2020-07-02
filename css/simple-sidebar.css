@@ -268,7 +268,7 @@ td {
 
 .ada-header {
     height: 30px;
-    background-color: var(--ada-medium-blue);
+    background-color: black;
     width: 100%;
     z-index: 10;
     position: -webkit-sticky;
@@ -278,7 +278,7 @@ td {
 }
 
 .ada-header-text {
-    color: black;
+    color: white;
     margin-left: 50px;
     padding-top: 3px;
 }
@@ -286,7 +286,7 @@ td {
 
 .ada-footer {
     height: 30px;
-    background-color: var(--ada-medium-blue);
+    background-color: black;
     position: fixed;
     left: 0;
     bottom: 0;
